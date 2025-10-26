@@ -1,97 +1,68 @@
-🏡 Airbnb Clone Backend Documentation (alx-airbnb-project-documentation)
+# 🏡 Use Case Diagram — Airbnb Clone Backend Documentation
 
-This repository serves as the System Analysis and Design documentation phase for the backend of an Airbnb Clone application. It contains all the necessary pre-development artifacts—including feature lists, technical diagrams, user stories, data models, and API specifications—that guide the subsequent engineering and implementation phases.
+This directory contains the Use Case Diagram and supporting README for the "alx-airbnb-project-documentation" — the System Analysis & Design phase for an Airbnb Clone backend.
 
-🎯 Project Goal
+## Project overview
+The documentation in this repository captures the pre-development artifacts for a scalable, secure, and robust RESTful API backend for an Airbnb-like application. It simulates a real-world SDLC where design and planning precede implementation.
 
-The primary objective of this documentation project is to translate high-level requirements into a complete, structured, and developer-ready blueprint for a scalable, secure, and robust RESTful API backend.
+### Project goal
+Translate high-level requirements into a complete, developer-ready blueprint for a RESTful API backend that supports:
+- Secure authentication and authorization (JWT, RBAC)
+- PostgreSQL-backed persistence
+- Payment integration (e.g., Stripe)
+- Scalable, testable, and maintainable architecture
 
-This process simulates a real-world Software Development Life Cycle (SDLC) where comprehensive planning precedes coding.
+---
 
-✨ Core Functionalities & Technical Scope
+## ✨ Core Functionalities & Technical Scope
+Planned domains and highlights:
+- **User Management** — Authentication, authorization, profile management (Guests, Hosts, Admin).
+- **Property Listings** — Host CRUD, availability, search & filtering.
+- **Booking Management** — Reservation creation, date validation, cancellations.
+- **Payments & Financials** — Payment gateway integration and host payouts.
+- **Reviews & Notifications** — Review system and transactional notifications (email/in-app).
 
-The planned backend system will support the following key domains, ensuring adherence to modern technical standards (JWT, PostgreSQL, Stripe integration, etc.):
+---
 
-User Management: Secure authentication, authorization (RBAC), and profile management for Guests and Hosts.
+## 📝 Documentation artifacts in this repository
 
-Property Listings: CRUD operations for Hosts, advanced search, filtering, and availability management for Guests.
+| Artifact | Purpose | Status | Directory |
+|---|---:|:---:|---|
+| Features & Functionalities Overview | High-level map of features, technical & non-functional requirements | ✅ Completed | features-and-functionalities/ |
+| Use Case Diagram | Visual model of actors and goals within the system | ✅ Completed | use-case-diagram/ |
+| User Stories | Requirements from Guest / Host / Admin perspectives | ⏳ Pending | user-stories/ |
+| Data Flow Diagram (DFD) | Visualize data movement through system processes | ⏳ Pending | system-diagrams/ |
+| Flowcharts | Detailed logic & decision flows (Booking, Payment) | ⏳ Pending | system-diagrams/ |
+| API Specifications | RESTful endpoint contracts (paths, request/response) | ⏳ Pending | api-specifications/ |
 
-Booking Management: Reservation creation, date validation, and cancellation tracking.
+---
 
-Payments & Financials: Integration with a payment gateway (e.g., Stripe) for upfront payments and host payouts.
+## Use Case Diagram
+- File path: `use-case-diagram/use_case_diagram.png`  
+- Description: Visual representation of the system boundary, primary actors (Unregistered User, Guest, Host, Admin, Payment Gateway), and their main goals (e.g., Log In, Create Listing, Submit Payment).
 
-Reviews & Notifications: System for submitting reviews, host responses, and transactional notifications (email/in-app).
+If viewing on GitHub, open the image directly:
+![Use Case Diagram](./use_case_diagram.png)
 
-📝 Documentation Artifacts
+---
 
-The following documents and diagrams will be produced as part of this project, organized into their respective directories:
+## How to review
+1. Clone the repository or browse on GitHub.
+2. Open `use-case-diagram/use_case_diagram.png` to inspect the diagram.
+3. Refer to `features-and-functionalities/features_and_functionalities_overview.png` for the feature map that complements the use case diagram.
 
-Artifact
+---
 
-Purpose
+## What's next
+- Convert the Use Case Diagram into UML actors & use cases in the design docs, if desired.
+- Draft user stories and API specifications (pending).
+- Link use cases to concrete API endpoints and database entities during the design-to-implementation handoff.
 
-Status
+---
 
-Directory
+## Contributing
+Contributions and suggestions welcome — open an issue or submit a PR with improvements or clarifications to the diagrams and documentation.
 
-Features & Functionalities Overview
-
-High-level map of all required features, technical, and non-functional requirements.
-
-Completed
-
-features-and-functionalities/
-
-Use Case Diagram
-
-Visual model of Actors and their interactions/goals within the system.
-
-Completed
-
-use-case-diagram/
-
-User Stories
-
-Defines requirements from the perspective of the Guest, Host, and Admin.
-
-Pending
-
-user-stories/
-
-Data Flow Diagram (DFD)
-
-Visualizes the flow of data through the system's processes.
-
-Pending
-
-system-diagrams/
-
-Flowcharts
-
-Detailed logic and decision-making for complex processes (e.g., Booking, Payment).
-
-Pending
-
-system-diagrams/
-
-API Specifications
-
-Detailed technical contracts for all RESTful endpoints (methods, paths, request/response bodies).
-
-Pending
-
-api-specifications/
-
-🚀 Completed Artifacts Summary
-
-1. Features and Functionalities Overview
-
-File Path: features-and-functionalities/features_and_functionalities_overview.png
-
-Content: A breakdown of all project requirements, categorized into Core Functionalities, Technical Requirements, and Non-Functional Requirements.
-
-2. Use Case Diagram
-
-File Path: use-case-diagram/use_case_diagram.png
-
-Content: A visual representation of the system boundary, key actors (Unregistered User, Guest, Host, Admin, Payment Gateway), and their main goals (e.g., Log In, Create Listing, Submit Payment).
+---
+Repository: EinsteinDipondo/alx-airbnb-project-documentation
+Commit: 58ba80f8cf9453923b17e4e817871ad59daa710c
