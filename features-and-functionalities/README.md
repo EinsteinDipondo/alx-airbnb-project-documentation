@@ -1,91 +1,134 @@
-🏡 Airbnb Clone Backend Documentation (alx-airbnb-project-documentation)
+# 🏡 Airbnb Clone Backend — Features & Functionalities Overview
 
-This repository serves as the System Analysis and Design documentation phase for the backend of an Airbnb Clone application. It contains all the necessary pre-development artifacts—including feature lists, technical diagrams, user stories, data models, and API specifications—that guide the subsequent engineering and implementation phases.
+A System Analysis & Design document set for the backend of an Airbnb-like application. This README provides a concise, navigable overview of core features, technical scope, current artifacts, and next deliverables for the project.
 
-🎯 Project Goal
+---
 
-The primary objective of this documentation project is to translate high-level requirements into a complete, structured, and developer-ready blueprint for a scalable, secure, and robust RESTful API backend.
+## Table of contents
 
-This process simulates a real-world Software Development Life Cycle (SDLC) where comprehensive planning precedes coding.
+- [Project Goal](#project-goal)
+- [Core Functionalities & Technical Scope](#core-functionalities--technical-scope)
+  - [User Management](#user-management)
+  - [Property Listings](#property-listings)
+  - [Booking Management](#booking-management)
+  - [Payments & Financials](#payments--financials)
+  - [Reviews & Notifications](#reviews--notifications)
+  - [Admin & Analytics](#admin--analytics)
+- [Non-functional Requirements](#non-functional-requirements)
+- [Documentation Artifacts (Status)](#documentation-artifacts-status)
+- [Current Deliverable](#current-deliverable)
+- [How to use this deliverable](#how-to-use-this-deliverable)
+- [Contributing](#contributing)
+- [License & Attribution](#license--attribution)
 
-✨ Core Functionalities & Technical Scope
+---
 
-The planned backend system will support the following key domains, ensuring adherence to modern technical standards (JWT, PostgreSQL, Stripe integration, etc.):
+## Project Goal
 
-User Management: Secure authentication, authorization (RBAC), and profile management for Guests and Hosts.
+Build a developer-ready blueprint (pre-development artifacts) for a scalable, secure, and robust RESTful API backend that models a production-ready Airbnb clone. This documentation simulates a real-world SDLC phase prior to implementation, translating product requirements into technical designs and API contracts.
 
-Property Listings: CRUD operations for Hosts, advanced search, filtering, and availability management for Guests.
+---
 
-Booking Management: Reservation creation, date validation, and cancellation tracking.
+## Core Functionalities & Technical Scope
 
-Payments & Financials: Integration with a payment gateway (e.g., Stripe) for upfront payments and host payouts.
+The backend will implement a set of core domains and technical patterns typical for a production-grade accommodation marketplace.
 
-Reviews & Notifications: System for submitting reviews, host responses, and transactional notifications (email/in-app).
+### User Management
+- Secure authentication: JWT-based token flow (access + refresh tokens).
+- Authorization: Role-based access control (Guest, Host, Admin).
+- Profile management: user profiles, verification statuses, KYC placeholders.
 
-📝 Documentation Artifacts
+### Property Listings
+- Hosts can create/update/delete/list properties.
+- Rich metadata: photos, amenities, rules, house manual.
+- Availability & pricing models: base price, seasonal adjustments, cleaning fees.
+- Search & filtering: location, date availability, price range, amenities, rating.
 
-The following documents and diagrams will be produced as part of this project, organized into their respective directories:
+### Booking Management
+- Reservation lifecycle: availability checks, booking hold/confirm, cancellations, modifications.
+- Date validation: conflict checks, minimum/maximum stay rules.
+- Booking states and history for guests/hosts.
 
-Artifact
+### Payments & Financials
+- Payment gateway integration (Stripe-compatible flow): authorizations, captures, refunds.
+- Host payouts, platform fees, and payout scheduling.
+- Financial reports & reconciliations (design-level).
 
-Purpose
+### Reviews & Notifications
+- Reviews and ratings for properties and hosts.
+- Host responses to reviews.
+- Transactional notifications: email (templates), in-app notifications, webhooks.
 
-Status
+### Admin & Analytics
+- Admin dashboards & moderation controls (listing takedowns, user suspension).
+- Audit logs for critical actions.
+- Metrics & analytics design for occupancy, revenue, disputes.
 
-Directory
+---
 
-Features & Functionalities Overview
+## Non-functional Requirements
+- Persistence: PostgreSQL (relational data model).
+- API: RESTful principles, JSON API contracts, OpenAPI/Swagger design.
+- Security: input validation, authorization checks, rate limiting, data encryption at rest/in transit.
+- Observability: structured logging, metrics (Prometheus), distributed tracing (optional).
+- Performance & Scalability: horizontal scalability, DB indexing and caching strategy.
+- Testing: unit, integration, contract tests, and CI pipelines.
 
-High-level map of all required features, technical, and non-functional requirements.
+---
 
-Completed
+## Documentation Artifacts (Status)
 
-features-and-functionalities/
+| Artifact                       | Purpose                                                                 | Status     | Directory                          |
+|-------------------------------:|------------------------------------------------------------------------|:----------:|------------------------------------|
+| Features & Functionalities     | High-level map of features, technical & non-functional requirements    | Completed  | features-and-functionalities/      |
+| Use Case Diagram               | Visual model of actors and their interactions/goals                    | Pending    | system-diagrams/                   |
+| User Stories                   | Requirements from Guest, Host, and Admin perspectives                  | Pending    | user-stories/                      |
+| Data Flow Diagram (DFD)        | Visualizes data flow through processes                                 | Pending    | system-diagrams/                   |
+| Flowcharts                     | Logic/decision flows for complex processes (Booking, Payment)          | Pending    | system-diagrams/                   |
+| API Specifications             | REST endpoint contracts (paths, methods, request/response examples)    | Pending    | api-specifications/                |
+| ER Diagram / DB Schema         | Entity relationships and normalization                                | Pending    | data-models/                       |
+| Sequence & Component Diagrams  | Interaction sequences and component responsibilities                   | Pending    | system-diagrams/                   |
 
-Use Case Diagram
+---
 
-Visual model of Actors and their interactions/goals within the system.
+## Current Deliverable
 
-Pending
+- File path: `features-and-functionalities/features_and_functionalities_overview.png`  
+- Content: A visual diagram that categorizes requirements into:
+  - Core Functionalities (User, Listings, Booking, Payment, Reviews)
+  - Technical Requirements (Database, API, Auth, Observability)
+  - Non-functional Requirements (Performance, Security, Scalability)
 
-system-diagrams/
+This PNG is intended to be the canonical high-level overview referenced by the remaining artifacts.
 
-User Stories
+---
 
-Defines requirements from the perspective of the Guest, Host, and Admin.
+## How to use this deliverable
 
-Pending
+- Use the features overview image as the single source for scope conversations with stakeholders.
+- From this map, derive concrete user stories and prioritize artifacts to produce (start with API specs and ER diagram).
+- Convert each pending artifact into actionable tasks for engineers: e.g., OpenAPI schemas, DB migration scripts, test plans.
 
-user-stories/
+---
 
-Data Flow Diagram (DFD)
+## Contributing
 
-Visualizes the flow of data through the system's processes.
+- Suggested workflow:
+  1. Open an issue describing the artifact you want to work on.
+  2. Draft locally, and raise a PR that updates the matching directory.
+  3. Link diagrams and API specs to the Features & Functionalities overview for traceability.
+- Naming conventions:
+  - Use descriptive filenames (e.g., `booking_flowchart.svg`, `api_bookings_openapi.yaml`).
+  - Keep diagrams in vector format where possible (`.svg`) for clarity.
 
-Pending
+---
 
-system-diagrams/
+## License & Attribution
 
-Flowcharts
+This repository is intended for educational and demonstration purposes (ALX project). Include any applicable license file at the repo root if you plan to publish or reuse content.
 
-Detailed logic and decision-making for complex processes (e.g., Booking, Payment).
+---
 
-Pending
-
-system-diagrams/
-
-API Specifications
-
-Detailed technical contracts for all RESTful endpoints (methods, paths, request/response bodies).
-
-Pending
-
-api-specifications/
-
-📂 Current Deliverable: Features and Functionalities Overview
-
-The first major deliverable is the detailed feature breakdown, which establishes the complete scope of the project.
-
-File Path: features-and-functionalities/features_and_functionalities_overview.png
-
-Content: This diagram systematically categorizes requirements into Core Functionalities (User, Listings, Booking, Payment), Technical Requirements (Database, API, Auth), and Non-Functional Requirements (Scalability, Security, Performance).
+If you need, I can:
+- Produce the missing API specification skeleton for bookings (OpenAPI v3 YAML), or
+- Draft the user stories for Guest/Host/Admin roles next.
