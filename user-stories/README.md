@@ -1,103 +1,105 @@
-🏡 Airbnb Clone Backend Documentation (alx-airbnb-project-documentation)
+# 🏡 Airbnb Clone — Backend Documentation (alx-airbnb-project-documentation)
 
-This repository serves as the System Analysis and Design documentation phase for the backend of an Airbnb Clone application. It contains all the necessary pre-development artifacts—including feature lists, technical diagrams, user stories, data models, and API specifications—that guide the subsequent engineering and implementation phases.
+A System Analysis & Design (SAD) documentation package for the backend of an Airbnb-like application. This repository contains the pre-development artifacts required to turn high-level requirements into a developer-ready blueprint for a secure, scalable RESTful API.
 
-🎯 Project Goal
+---
 
-The primary objective of this documentation project is to translate high-level requirements into a complete, structured, and developer-ready blueprint for a scalable, secure, and robust RESTful API backend.
+## 🎯 Project Goal
 
-This process simulates a real-world Software Development Life Cycle (SDLC) where comprehensive planning precedes coding.
+Deliver a complete, structured specification for a production-grade backend that supports:
 
-✨ Core Functionalities & Technical Scope
+- Secure user authentication and authorization (JWT, RBAC)
+- Reliable booking and availability management
+- Payment integration (Stripe) and financial flows
+- Searchable, filterable property listings
+- Reviews, notifications, and auditability
 
-The planned backend system will support the following key domains, ensuring adherence to modern technical standards (JWT, PostgreSQL, Stripe integration, etc.):
+This documentation simulates a real-world SDLC where design, validation, and planning precede implementation.
 
-User Management: Secure authentication, authorization (RBAC), and profile management for Guests and Hosts.
+---
 
-Property Listings: CRUD operations for Hosts, advanced search, filtering, and availability management for Guests.
+## ✨ Core Functionalities & Technical Scope
 
-Booking Management: Reservation creation, date validation, and cancellation tracking.
+The backend will include the following domains and technical considerations:
 
-Payments & Financials: Integration with a payment gateway (e.g., Stripe) for upfront payments and host payouts.
+- User Management
+  - Registration, login, password reset
+  - Role-Based Access Control (Guest, Host, Admin)
+  - Profiles and verification workflows
+- Property Listings
+  - CRUD for Hosts
+  - Availability calendars, photos, amenities
+  - Search, filtering, sorting, and pagination
+- Booking Management
+  - Reservation creation, validation (date conflicts), and cancellation
+  - Booking lifecycle and statuses
+- Payments & Financials
+  - Stripe (or pluggable gateway) integration
+  - Upfront payments, refunds, host payouts
+  - Basic financial reporting and transaction records
+- Reviews & Notifications
+  - Post-stay reviews and host responses
+  - Email and in-app transactional notifications
+- Non-functional Concerns
+  - PostgreSQL for persistent storage
+  - Secure APIs (HTTPS, JWT, input validation)
+  - Logging, monitoring, and basic rate limiting
 
-Reviews & Notifications: System for submitting reviews, host responses, and transactional notifications (email/in-app).
+---
 
-📝 Documentation Artifacts
+## 📝 Documentation Artifacts
 
-The following documents and diagrams will be produced as part of this project, organized into their respective directories:
+The repository is organized with the most important design artifacts. Each artifact includes its purpose, current status, and directory.
 
-Artifact
+| Artifact                         | Purpose                                                                 | Status     | Directory                                 |
+|----------------------------------|-------------------------------------------------------------------------|------------|-------------------------------------------|
+| Features & Functionalities Overview | High-level map of all required features and non-functional requirements | Completed  | features-and-functionalities/             |
+| Use Case Diagram                 | Visual model of actors and their interactions                           | Completed  | use-case-diagram/                          |
+| User Stories                     | Requirements written from user perspectives (Guest, Host, Admin)        | Completed  | user-stories/                              |
+| Data Flow Diagram (DFD)         | Visualize data movement through system processes                        | Pending    | system-diagrams/                           |
+| Flowcharts                       | Detailed logic for complex processes (Booking, Payment)                 | Pending    | system-diagrams/                           |
+| API Specifications               | Endpoint contracts (methods, paths, request/response schemas)           | Pending    | api-specifications/                        |
 
-Purpose
+---
 
-Status
+## ✅ Completed Artifacts — Quick Summary
 
-Directory
+1. Features and Functionalities Overview  
+   - File: features-and-functionalities/features_and_functionalities_overview.png  
+   - What: Breakdown of project requirements categorized into Core, Technical, and Non-Functional Requirements.
 
-Features & Functionalities Overview
+2. Use Case Diagram  
+   - File: use-case-diagram/use_case_diagram.png  
+   - What: Visual representation of system boundaries and actors (Unregistered User, Guest, Host, Admin, Payment Gateway) and their main goals.
 
-High-level map of all required features, technical, and non-functional requirements.
+3. User Stories  
+   - File: user-stories/user-stories.md  
+   - What: Actionable user stories in the format "As a [User], I want to [Goal] so that [Benefit]" covering registration, search, listing creation, booking flows, and more.
 
-Completed
+---
 
-features-and-functionalities/
+## How to use this documentation
 
-Use Case Diagram
+- Start with the Features & Functionalities Overview to understand scope and constraints.
+- Review Use Case Diagram to identify actor responsibilities and system boundaries.
+- Use the User Stories as the basis for backlog items and acceptance criteria.
+- Once available, consult the API Specifications and Flowcharts to begin implementation.
 
-Visual model of Actors and their interactions/goals within the system.
+---
 
-Completed
+## Next steps (planned)
 
-use-case-diagram/
+- Complete the Data Flow Diagrams and Flowcharts to capture system behavior and edge cases.
+- Produce formal API specifications (OpenAPI / Swagger).
+- Add sequence diagrams and database schema migrations.
 
-User Stories
+---
 
-Defines requirements from the perspective of the Guest, Host, and Admin.
+## Contact & Attribution
 
-Completed
+Author: EinsteinDipondo  
+Repository: EinsteinDipondo/alx-airbnb-project-documentation
 
-user-stories/
+---
 
-Data Flow Diagram (DFD)
-
-Visualizes the flow of data through the system's processes.
-
-Pending
-
-system-diagrams/
-
-Flowcharts
-
-Detailed logic and decision-making for complex processes (e.g., Booking, Payment).
-
-Pending
-
-system-diagrams/
-
-API Specifications
-
-Detailed technical contracts for all RESTful endpoints (methods, paths, request/response bodies).
-
-Pending
-
-api-specifications/
-
-🚀 Completed Artifacts Summary
-
-1. Features and Functionalities Overview
-
-File Path: features-and-functionalities/features_and_functionalities_overview.png
-
-Content: A breakdown of all project requirements, categorized into Core Functionalities, Technical Requirements, and Non-Functional Requirements.
-
-2. Use Case Diagram
-
-File Path: use-case-diagram/use_case_diagram.png
-
-Content: A visual representation of the system boundary, key actors (Unregistered User, Guest, Host, Admin, Payment Gateway), and their main goals (e.g., Log In, Create Listing, Submit Payment).
-
-3. User Stories
-
-File Path: user-stories/user-stories.md
-
-Content: Actionable requirements written in the "As a [User], I want to [Goal] so that [Benefit]" format, covering core features like registration, searching, listing creation, and booking.
+Thank you — this documentation is intended to be a living blueprint. Updates will be added as diagrams and API contracts are completed.
