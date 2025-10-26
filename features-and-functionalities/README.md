@@ -129,6 +129,3 @@ This repository is intended for educational and demonstration purposes (ALX proj
 
 ---
 
-If you need, I can:
-- Produce the missing API specification skeleton for bookings (OpenAPI v3 YAML), or
-- Draft the user stories for Guest/Host/Admin roles next.
